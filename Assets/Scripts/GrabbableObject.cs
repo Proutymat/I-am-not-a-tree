@@ -12,10 +12,8 @@ public class GrabbableObject : MonoBehaviour
     [SerializeField] private Transform _hand;
     
     private Vector3 _originPosition;
-    [SerializeField] private string _objectName;
 
     public Vector3 OriginPosition { get { return _originPosition; } }
-    public string ObjectName { get { return _objectName; } }
     
     [Header("Sounds")]
     public AudioClip grabObjSound;

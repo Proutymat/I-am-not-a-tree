@@ -50,14 +50,9 @@ public class PlayerPickUp : MonoBehaviour
                 if (raycastHit.transform.TryGetComponent(out _grabbableObject))
                 {
                     displayCanvas = true;
-                    AudioSource audioSourceObject;
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         _grabbableObject.Grab(_objectGrabPointTransform);
-                        audioSourceObject = _grabbableObject.GetComponent<AudioSource>(); //Là recuperer
-                        audioSourceObject.volume = Random.Range(0.75f, 0.95f); 
-                        audioSourceObject.pitch = Random.Range(0.8f, 1f);
-                        audioSourceObject.PlayOneShot(_grabbableObject.grabObjSound);
                     }
                     else
                     {
