@@ -1427,8 +1427,8 @@ MonoBehaviour:
   matObj2: {fileID: 2100000, guid: 25fdcf0320f43ab47944e01ecf6cb912, type: 2}
   matObj3: {fileID: 2100000, guid: 1057e84f8eae9584b80c199f8b5a7ee1, type: 2}
   matObj4: {fileID: 2100000, guid: 65983e309d4999d44b0a96fff8f75714, type: 2}
-  ugly: 1
-  sonBad: 1
+  ugly: 0
+  sonBad: 0
 --- !u!4 &1020876764
 Transform:
   m_ObjectHideFlags: 0
@@ -3604,7 +3604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2954016339255770097, guid: 8660b459f2a6bbe4b82273086dbed41b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 2954016339255770097, guid: 8660b459f2a6bbe4b82273086dbed41b, type: 3}
       propertyPath: m_LocalPosition.y

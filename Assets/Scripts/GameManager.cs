@@ -138,8 +138,6 @@ public class GameManager : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetAfternoon");
             FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Sting");
             object3.gameObject.SetActive(true);
-            insect2.gameObject.SetActive(true);
-            feuille2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter2 : image2;
             writeDialogue.CallNextLines(4);
             writeDialogue.WriteReaction(currentObject);
@@ -149,8 +147,6 @@ public class GameManager : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetNight");
             FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Sting");
             object4.gameObject.SetActive(true);
-            insect3.gameObject.SetActive(true);
-            feuille3.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter3 : image3;
             writeDialogue.CallNextLines(2);
             writeDialogue.WriteReaction(currentObject);
