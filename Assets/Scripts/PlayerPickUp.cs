@@ -14,6 +14,7 @@ public class PlayerPickUp : MonoBehaviour
     [SerializeField] private LayerMask _pickUpLayerMask;
     [SerializeField] private float _pickUpDistance = 2.0f;
     [SerializeField] private float _interactingDistance = 2.0f;
+    [SerializeField] private GameManager _gameManager;
     
     // PRESS E VARIABLES
     [SerializeField] private Canvas _pressECanvas;
@@ -119,6 +120,7 @@ public class PlayerPickUp : MonoBehaviour
             else
             {
                 Debug.Log("Dropped object in hole : " + _grabbableObject);
+                _gameManager.NextEvent();
                 _grabbableObject.gameObject.SetActive(false);
                 _grabbableObject = null;
                 return true;
