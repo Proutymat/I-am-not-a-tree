@@ -329,7 +329,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDialogue: {fileID: 3834809356406338055}
   lines:
-  - FlzfldsFlezL
-  - FGDSHHOJKHMEZGKBH
-  reactions: []
-  textSpeed: 0.6
+  - There is no real food at this wedding, only weird fancy slime.
+  - "I\u2019m just gonna eat it. "
+  - 'Yum yum yum. '
+  - "I can\u2019t believe our daughter is getting married\u2026"
+  - "I know, it\u2019s a beautiful day."
+  - Argh
+  - Honey? HONEY? AHHHH
+  - Gimme gimme gimme a man after midnight lalalala
+  - Oh fuck they are doing the conga, wait for me guys!!
+  reactions:
+  - 
+  - Oh, an insect.
+  - A leaf just fell.
+  - Today is the wedding!
+  - "Cool, it\u2019s a cake tree."
+  - Perfect, a tissue.
+  - Cool, the tree gave me a beer.
+  - An insect just came out of the tree.
+  - The tree is losing its leaves.
+  - There is a tree at the wedding.
+  - Thank you, tree.
+  - Where did this tissue come from?
+  - "That's a beer, and that\u2019s a tree!"
+  textSpeed: 0.1
