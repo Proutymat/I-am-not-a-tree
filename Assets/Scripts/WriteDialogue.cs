@@ -14,6 +14,7 @@ public class WriteDialogue : MonoBehaviour
     private int reactionIndex;
     private bool isWritting = false;
     private bool isReacting = false;
+    private bool firstCall = false;
     private Dictionary<string, int> objectIndex = new Dictionary<string, int>();
     void Start()
     {
@@ -24,39 +25,43 @@ public class WriteDialogue : MonoBehaviour
         objectIndex.Add("Cake", 4);
         objectIndex.Add("Tissue", 5);
         objectIndex.Add("Beer", 6);
+        gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (firstCall)
         {
-            if (!isReacting)
+            if (Input.GetMouseButtonDown(0))
             {
-                if (textDialogue.text == lines[index])
+                if (!isReacting)
                 {
-                    NextLine();
-                    isWritting = true;
+                    if (textDialogue.text == lines[index])
+                    {
+                        NextLine();
+                        isWritting = true;
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        textDialogue.text = lines[index];
+                        isWritting = false;
+                    }
                 }
                 else
                 {
-                    StopAllCoroutines();
-                    textDialogue.text = lines[index];
-                    isWritting = false;
-                }
-            }
-            else
-            {
-                if (textDialogue.text == reactions[reactionIndex])
-                {
-                    isReacting = false;
-                    isWritting = true;
-                    NextLine();
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    textDialogue.text = reactions[reactionIndex];
-                    isWritting = false;
+                    if (textDialogue.text == reactions[reactionIndex])
+                    {
+                        isReacting = false;
+                        isWritting = true;
+                        NextLine();
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        textDialogue.text = reactions[reactionIndex];
+                        isWritting = false;
+                    }
                 }
             }
         }
@@ -95,6 +100,7 @@ public class WriteDialogue : MonoBehaviour
     }
     public void CallNextLines(int numberOfLines)
     {
+        firstCall = true;
         linesToRead += numberOfLines;
         gameObject.SetActive(true);
         StartCoroutine(TypeLine());
