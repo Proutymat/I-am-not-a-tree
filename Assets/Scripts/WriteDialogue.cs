@@ -10,7 +10,7 @@ public class WriteDialogue : MonoBehaviour
     public string[] reactions;
     public float textSpeed;
     private int linesToRead;
-    private int index = 0;
+    private int index = 1;
     private int reactionIndex;
     private bool isWritting = false;
     private bool isReacting = false;
@@ -95,7 +95,6 @@ public class WriteDialogue : MonoBehaviour
     {
         if (index < linesToRead - 1)
         {
-            
             Debug.Log(lines[index]);
             index++;
             textDialogue.text = string.Empty;

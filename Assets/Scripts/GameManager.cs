@@ -130,8 +130,8 @@ public class GameManager : MonoBehaviour
             FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Sting");
             object2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter1 : image1;
-            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(3);
+            writeDialogue.WriteReaction(currentObject);
         }
         else if (eventCount == 2)
         {
@@ -141,8 +141,8 @@ public class GameManager : MonoBehaviour
             insect2.gameObject.SetActive(true);
             feuille2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter2 : image2;
-            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(4);
+            writeDialogue.WriteReaction(currentObject);
         }
         else if (eventCount == 3)
         {
@@ -152,8 +152,8 @@ public class GameManager : MonoBehaviour
             insect3.gameObject.SetActive(true);
             feuille3.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter3 : image3;
-            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(2);
+            writeDialogue.WriteReaction(currentObject);
         }
         else if (eventCount > 3)
         {
