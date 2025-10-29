@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int fadeInTime = 7;
     [SerializeField] private GameObject endingObject;
     [SerializeField] private Image character;
+    [SerializeField] private WriteDialogue writeDialogue;
     
     // OBJECTS
     [SerializeField] private GameObject object1;
@@ -105,16 +106,19 @@ public class GameManager : MonoBehaviour
         {
             object2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter1 : image1;
+            writeDialogue.CallNextLines(3);
         }
         else if (eventCount == 2)
         {
             object3.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter2 : image2;
+            writeDialogue.CallNextLines(4);
         }
         else if (eventCount == 3)
         {
             object4.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter3 : image3;
+            writeDialogue.CallNextLines(2);
         }
             
     }
