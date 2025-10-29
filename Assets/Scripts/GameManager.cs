@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
 
     private void boucle()
     {
+        endingObject.SetActive(false);
         var color = character.color;
         color.a = 0f;
         character.color = color;
@@ -181,6 +182,8 @@ public class GameManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetEnd");
         FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Main");
+        character.DOFade(0f, fadeInTime).SetEase(Ease.InOutSine);   
+        endingObject.SetActive(true);
         endingObject.gameObject.SetActive(true);
     }
 
