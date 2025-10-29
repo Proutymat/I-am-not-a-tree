@@ -85,12 +85,12 @@ public class WriteDialogue : MonoBehaviour
     }
     void NextLine()
     {
-        if(index < linesToRead)
+        if (index < linesToRead)
         {
             index++;
             textDialogue.text = string.Empty;
             StartCoroutine(TypeLine());
-            isWritting = true ;
+            isWritting = true;
         }
         else
         {
@@ -98,7 +98,7 @@ public class WriteDialogue : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    void CallNextLines(int numberOfLines)
+    public void CallNextLines(int numberOfLines)
     {
         linesToRead += numberOfLines;
         gameObject.SetActive(true);
@@ -106,9 +106,9 @@ public class WriteDialogue : MonoBehaviour
         isWritting = true;
     }
 
-    void WriteReaction(string Object)
+    public void WriteReaction(string Object)
     {
-
+        gameObject.SetActive(true);
         if (isWritting == true)
         {
             StopAllCoroutines();
