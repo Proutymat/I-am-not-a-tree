@@ -240,6 +240,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &392517512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 678525855496761284, guid: 8660b459f2a6bbe4b82273086dbed41b, type: 3}
+  m_PrefabInstance: {fileID: 5286756656950161940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421169622
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,15 +760,14 @@ MonoBehaviour:
   fadeInTime: 2
   endingObject: {fileID: 1933393663}
   character: {fileID: 801227154}
-  decor: {fileID: 0}
   object1: {fileID: 923351380}
   object2: {fileID: 1535026772}
   object3: {fileID: 1568668453}
   object4: {fileID: 538287889}
-  decorObject: {fileID: 0}
-  troncObject: {fileID: 0}
-  groundObject: {fileID: 0}
-  footsObject: {fileID: 0}
+  decorObject: {fileID: 890489442}
+  troncObject: {fileID: 392517512}
+  groundObject: {fileID: 1562333986}
+  footsObject: {fileID: 1689019476}
   uglyCharacter1: {fileID: 0}
   uglyCharacter2: {fileID: 0}
   uglyCharacter3: {fileID: 0}
@@ -969,6 +973,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6251854911725383905, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
   m_PrefabInstance: {fileID: 3680706123657147414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1562333986 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4612182691300012707, guid: 8660b459f2a6bbe4b82273086dbed41b, type: 3}
+  m_PrefabInstance: {fileID: 5286756656950161940}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1568668453 stripped
 GameObject:
@@ -1179,6 +1188,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 718, y: 404}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1689019476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3516753822788961712, guid: 8660b459f2a6bbe4b82273086dbed41b, type: 3}
+  m_PrefabInstance: {fileID: 5286756656950161940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1933393663
 GameObject:
   m_ObjectHideFlags: 0
