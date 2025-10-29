@@ -857,6 +857,7 @@ MonoBehaviour:
   fadeInTime: 2
   endingObject: {fileID: 1933393663}
   character: {fileID: 801227154}
+  writeDialogue: {fileID: 1607811489}
   object1: {fileID: 923351380}
   object2: {fileID: 1535026772}
   object3: {fileID: 1568668453}
@@ -1089,6 +1090,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1517056785501408120, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
   m_PrefabInstance: {fileID: 3680706123657147414}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1607811489 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2312543750224969280, guid: 7b96b61bc15ab52438e8dc5dffe0c4ff, type: 3}
+  m_PrefabInstance: {fileID: 366568092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e5517b264b74246818047b19febd95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631126904
 GameObject:
   m_ObjectHideFlags: 0
