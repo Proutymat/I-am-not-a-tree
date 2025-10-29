@@ -118,6 +118,7 @@ public class PlayerPickUp : MonoBehaviour
             }
             else
             {
+                Debug.Log("Dropped object in hole : " + _grabbableObject);
                 _grabbableObject.gameObject.SetActive(false);
                 _grabbableObject = null;
                 return true;
