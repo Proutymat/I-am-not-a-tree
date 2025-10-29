@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Material uglyTronc;
     [SerializeField] private Material uglyGround;
     [SerializeField] private Material uglyFoots;
+    [SerializeField] private Material uglyMatObj1;
+    [SerializeField] private Material uglyMatObj2;
+    [SerializeField] private Material uglyMatObj3;
+    [SerializeField] private Material uglyMatObj4;
     
     // BEAUTIFUL Textures
     [SerializeField] private Sprite image1;
@@ -43,6 +47,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Material tronc;
     [SerializeField] private Material ground;
     [SerializeField] private Material foots;
+    [SerializeField] private Material matObj1;
+    [SerializeField] private Material matObj2;
+    [SerializeField] private Material matObj3;
+    [SerializeField] private Material matObj4;
 
     [SerializeField] private bool ugly;
     
@@ -70,6 +78,10 @@ public class GameManager : MonoBehaviour
             decorObject.GetComponent<Renderer>().material = uglyDecor1;
             groundObject.GetComponent<Renderer>().material = uglyGround;
             footsObject.GetComponent<Renderer>().material = uglyFoots;
+            object1.GetComponent<Renderer>().material = uglyMatObj1;
+            object2.GetComponent<Renderer>().material = uglyMatObj2;
+            object3.GetComponent<Renderer>().material = uglyMatObj3;
+            object4.GetComponent<Renderer>().material = uglyMatObj4;
         }
         else
         {
@@ -77,6 +89,10 @@ public class GameManager : MonoBehaviour
             decorObject.GetComponent<Renderer>().material = decor1;
             groundObject.GetComponent<Renderer>().material = ground;
             footsObject.GetComponent<Renderer>().material = foots;
+            object1.GetComponent<Renderer>().material = matObj1;
+            object2.GetComponent<Renderer>().material = matObj2;
+            object3.GetComponent<Renderer>().material = matObj3;
+            object4.GetComponent<Renderer>().material = matObj4;
         }
     }
 

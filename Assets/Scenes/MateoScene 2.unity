@@ -865,24 +865,32 @@ MonoBehaviour:
   troncObject: {fileID: 392517512}
   groundObject: {fileID: 1562333986}
   footsObject: {fileID: 1689019476}
-  uglyCharacter1: {fileID: 0}
-  uglyCharacter2: {fileID: 0}
-  uglyCharacter3: {fileID: 0}
-  uglyDecor1: {fileID: 2100000, guid: 3d52d3625edc81848963836a6bb7f4e2, type: 2}
-  uglyDecor2: {fileID: 0}
-  uglyDecor3: {fileID: 0}
+  uglyCharacter1: {fileID: 21300000, guid: 1efe7fce262b7ab409677ee8562b0143, type: 3}
+  uglyCharacter2: {fileID: 21300000, guid: 996c4464567c7ed4f9182048c89b4106, type: 3}
+  uglyCharacter3: {fileID: 21300000, guid: 95341d4b385ded74fbab7ec2b6de67f3, type: 3}
+  uglyDecor1: {fileID: 2100000, guid: de314bea6c1993540bb00fbe69b86b18, type: 2}
+  uglyDecor2: {fileID: 2100000, guid: de314bea6c1993540bb00fbe69b86b18, type: 2}
+  uglyDecor3: {fileID: 2100000, guid: de314bea6c1993540bb00fbe69b86b18, type: 2}
   uglyTronc: {fileID: 2100000, guid: 0be6ccf0de62b3f449c7c65ab5f39bac, type: 2}
   uglyGround: {fileID: 2100000, guid: fb8473a63db17bc4381a1adb4b38731a, type: 2}
   uglyFoots: {fileID: 2100000, guid: 8e93fd59f9e95da4a999272b836b9977, type: 2}
+  uglyMatObj1: {fileID: 2100000, guid: 5cff08fb6078f1c469d7ba6da5a906fc, type: 2}
+  uglyMatObj2: {fileID: 2100000, guid: 79da9855bb4341f45b8606603ccc248f, type: 2}
+  uglyMatObj3: {fileID: 2100000, guid: 87488ff2481c017429bc631ca02eff4b, type: 2}
+  uglyMatObj4: {fileID: 2100000, guid: 047f880b74cc42e438e6732fa33662ea, type: 2}
   image1: {fileID: 21300000, guid: 1ebab9f3c83ad5440a5a5a600774cceb, type: 3}
   image2: {fileID: 21300000, guid: 5ab86ffca59482a479256329fc4a7da1, type: 3}
   image3: {fileID: 21300000, guid: fc9b67b3b3b2d0843ac678ba5c3ee8a8, type: 3}
   decor1: {fileID: 2100000, guid: 3d52d3625edc81848963836a6bb7f4e2, type: 2}
-  decor2: {fileID: 0}
-  decor3: {fileID: 0}
+  decor2: {fileID: 2100000, guid: 3d52d3625edc81848963836a6bb7f4e2, type: 2}
+  decor3: {fileID: 2100000, guid: 3d52d3625edc81848963836a6bb7f4e2, type: 2}
   tronc: {fileID: 2100000, guid: 502391b441e371e4d847c18896bfccca, type: 2}
   ground: {fileID: 2100000, guid: a6d691a16dc261c45a46ef72245bfa6a, type: 2}
   foots: {fileID: 2100000, guid: 5aac531a79c8c11479d8729a66a8dd6c, type: 2}
+  matObj1: {fileID: 2100000, guid: e57176a543553a340b740ff45a154adc, type: 2}
+  matObj2: {fileID: 2100000, guid: 25fdcf0320f43ab47944e01ecf6cb912, type: 2}
+  matObj3: {fileID: 2100000, guid: 1057e84f8eae9584b80c199f8b5a7ee1, type: 2}
+  matObj4: {fileID: 2100000, guid: 65983e309d4999d44b0a96fff8f75714, type: 2}
   ugly: 1
 --- !u!4 &1020876764
 Transform:
@@ -1505,7 +1513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6968847316549281460, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8128205927291904303, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
       propertyPath: m_Name
