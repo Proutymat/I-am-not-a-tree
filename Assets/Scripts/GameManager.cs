@@ -10,19 +10,41 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int fadeInTime = 7;
     [SerializeField] private GameObject endingObject;
     [SerializeField] private Image character;
-    [SerializeField] private Image decor;
     
     // OBJECTS
     [SerializeField] private GameObject object1;
     [SerializeField] private GameObject object2;
     [SerializeField] private GameObject object3;
     [SerializeField] private GameObject object4;
+    
+    [SerializeField] private GameObject decorObject;
+    [SerializeField] private GameObject troncObject;
+    [SerializeField] private GameObject groundObject;
+    [SerializeField] private GameObject footsObject;
+    
+    // UGLY Textures
+    [SerializeField] private Sprite uglyCharacter1;
+    [SerializeField] private Sprite uglyCharacter2;
+    [SerializeField] private Sprite uglyCharacter3;
+    [SerializeField] private Material uglyDecor1;
+    [SerializeField] private Material uglyDecor2;
+    [SerializeField] private Material uglyDecor3;
+    [SerializeField] private Material uglyTronc;
+    [SerializeField] private Material uglyGround;
+    [SerializeField] private Material uglyFoots;
+    
+    // BEAUTIFUL Textures
     [SerializeField] private Sprite image1;
     [SerializeField] private Sprite image2;
     [SerializeField] private Sprite image3;
-    [SerializeField] private Sprite decor1;
-    [SerializeField] private Sprite decor2;
-    [SerializeField] private Sprite decor3;
+    [SerializeField] private Material decor1;
+    [SerializeField] private Material decor2;
+    [SerializeField] private Material decor3;
+    [SerializeField] private Material tronc;
+    [SerializeField] private Material ground;
+    [SerializeField] private Material foots;
+
+    [SerializeField] private bool ugly;
     
     private int eventCount = 0;
     private float timer = 0;
@@ -39,6 +61,14 @@ public class GameManager : MonoBehaviour
         eventTriggered = true;
     }
 
+    private void setTextures()
+    {
+        if (ugly)
+        {
+            
+        }
+    }
+
     private void StartEvent()
     {
         Debug.Log("COUCOU");
@@ -47,17 +77,17 @@ public class GameManager : MonoBehaviour
         if (eventCount == 1)
         {
             object2.gameObject.SetActive(true);
-            character.sprite = image1;
+            character.sprite = ugly ? uglyCharacter1 : image1;
         }
         else if (eventCount == 2)
         {
             object3.gameObject.SetActive(true);
-            character.sprite = image2;
+            character.sprite = ugly ? uglyCharacter2 : image2;
         }
         else if (eventCount == 3)
         {
             object4.gameObject.SetActive(true);
-            character.sprite = image3;
+            character.sprite = ugly ? uglyCharacter3 : image3;
         }
             
     }

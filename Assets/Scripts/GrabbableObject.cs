@@ -53,7 +53,7 @@ public class GrabbableObject : MonoBehaviour
         this._objectGrabPointTransform = null;
         _objectRigidBody.isKinematic = true;
         _objectGrabPointTransform = null;
-        _objectRigidBody.AddForce(500 * _hand.forward);
+        //_objectRigidBody.AddForce(500 * _hand.forward);
         SetTriggerCollider(true);
     }
 

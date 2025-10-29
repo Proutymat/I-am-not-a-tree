@@ -142,7 +142,7 @@ public class PlayerPickUp : MonoBehaviour
                 return;
             }
         }
-        
+        Debug.Log("Grabbable Object: " + _grabbableObject);
         HandleGrabbableObjects();
     }
 }
