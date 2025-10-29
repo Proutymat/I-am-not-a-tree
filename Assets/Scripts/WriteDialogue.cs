@@ -73,6 +73,7 @@ public class WriteDialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
+        isWritting = true;
         textDialogue.text = string.Empty;
         foreach (char c in lines[index].ToCharArray())
         {
@@ -82,6 +83,7 @@ public class WriteDialogue : MonoBehaviour
     }
     IEnumerator TypeLineReaction()
     {
+        isWritting = true;
         textDialogue.text = string.Empty;
         foreach (char c in reactions[reactionIndex].ToCharArray())
         {

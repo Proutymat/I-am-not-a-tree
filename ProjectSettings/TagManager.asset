@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - DropZone
+  - leaf
+  - insect
+  - beer
+  - fairepart
+  - mouchoir
+  - cake
   layers:
   - Default
   - TransparentFX

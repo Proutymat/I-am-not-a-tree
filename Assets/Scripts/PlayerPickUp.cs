@@ -122,6 +122,30 @@ public class PlayerPickUp : MonoBehaviour
                 Debug.Log("Dropped object in hole : " + _grabbableObject);
                 _gameManager.NextEvent();
                 _grabbableObject.gameObject.SetActive(false);
+                if (_grabbableObject.CompareTag("leaf"))
+                {
+                    _gameManager.setString("Leaf");
+                }
+                else if (_grabbableObject.CompareTag("insect"))
+                {
+                    _gameManager.setString("Bug");
+                }
+                else if (_grabbableObject.CompareTag("beer"))
+                {
+                    _gameManager.setString("Beer");
+                }
+                else if (_grabbableObject.CompareTag("fairepart"))
+                {
+                    _gameManager.setString("Announcement");
+                }
+                else if (_grabbableObject.CompareTag("mouchoir"))
+                {
+                    _gameManager.setString("Tissue");
+                }
+                else if (_grabbableObject.CompareTag("cake"))
+                {
+                    _gameManager.setString("Cake");
+                }
                 _grabbableObject = null;
                 return true;
             }
