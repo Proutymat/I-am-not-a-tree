@@ -329,7 +329,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textDialogue: {fileID: 3834809356406338055}
   lines:
-  - FlzfldsFlezL
-  - FGDSHHOJKHMEZGKBH
-  reactions: []
-  textSpeed: 0.6
+  - There is no real food at this wedding, only weird fancy slime.
+  - "I\u2019m just gonna eat it. "
+  - 'Yum yum yum. '
+  - "I can\u2019t believe our daughter is getting married\u2026"
+  - "I know, it\u2019s a beautiful day."
+  reactions:
+  - 
+  - Oh, an insect.
+  - A leaf just fell.
+  - 
+  - 
+  - 
+  - 
+  - An insect just came out of the tree.
+  - The tree is losing its leaves.
+  - 
+  - 
+  - 
+  - 
+  textSpeed: 0.1
