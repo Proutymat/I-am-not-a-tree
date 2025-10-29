@@ -20,7 +20,7 @@ public class GrabbableObject : MonoBehaviour
     [SerializeField] private AudioClip dropObjSound;
     private AudioSource audioSourceObject;
     [SerializeField] private Collider _triggerCollider;
-    public void SetTriggerCollider(bool triggerCollider)
+    public void  SetTriggerCollider(bool triggerCollider)
     {
         if(_triggerCollider == null) 
         {
@@ -51,8 +51,9 @@ public class GrabbableObject : MonoBehaviour
     public void Drop()
     {
         this._objectGrabPointTransform = null;
-        _objectRigidBody.isKinematic = false;
-        _objectRigidBody.AddForce(_hand.forward * 150);
+        _objectRigidBody.isKinematic = true;
+        _objectGrabPointTransform = null;
+        _objectRigidBody.AddForce(500 * _hand.forward);
         SetTriggerCollider(true);
     }
 
@@ -67,12 +68,5 @@ public class GrabbableObject : MonoBehaviour
             Vector3 newPosition = Vector3.Lerp(transform.position, _objectGrabPointTransform.position, Time.deltaTime * lerpSpeed);
             _objectRigidBody.MovePosition(newPosition);
         }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        audioSourceObject.volume = Random.Range(0.75f, 0.95f); 
-        audioSourceObject.pitch = Random.Range(0.8f, 1f);
-        audioSourceObject.PlayOneShot(dropObjSound);
     }
 }

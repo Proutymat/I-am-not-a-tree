@@ -14,6 +14,7 @@ public class PlayerPickUp : MonoBehaviour
     [SerializeField] private LayerMask _pickUpLayerMask;
     [SerializeField] private float _pickUpDistance = 2.0f;
     [SerializeField] private float _interactingDistance = 2.0f;
+    [SerializeField] private GameManager _gameManager;
     
     // PRESS E VARIABLES
     [SerializeField] private Canvas _pressECanvas;
@@ -92,11 +93,56 @@ public class PlayerPickUp : MonoBehaviour
             _pressECanvas.gameObject.SetActive(false);
         }
     }
+    
+    private bool DetectHole()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(_playerCameraTransform.position, _playerCameraTransform.forward, out hit, _interactingDistance))
+        {
+            if (hit.collider.gameObject.CompareTag("DropZone"))
+            {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+
+    private bool HandleInteractableObjects()
+    {
+        // If the player is looking at the hole
+        if (DetectHole())
+        {
+            if (_grabbableObject == null)
+            {
+                Debug.Log("No object in hand : " + _grabbableObject);
+            }
+            else
+            {
+                Debug.Log("Dropped object in hole : " + _grabbableObject);
+                _gameManager.NextEvent();
+                _grabbableObject.gameObject.SetActive(false);
+                _grabbableObject = null;
+                return true;
+            }
+        }
+
+        return false;
+    }
 
 
     // Update is called once per frame
     void Update()
     {
+        // Is the plauer trying to interact with something
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (HandleInteractableObjects())
+            {
+                return;
+            }
+        }
+        
         HandleGrabbableObjects();
     }
 }
