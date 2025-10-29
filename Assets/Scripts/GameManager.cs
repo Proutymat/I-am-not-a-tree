@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Material matObj4;
 
     [SerializeField] private bool ugly;
+    [SerializeField] private bool sonBad;
 
     private string currentObject;
     
@@ -68,6 +69,12 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day");
+        boucle();
+    }
+
+    private void boucle()
+    {
         var color = character.color;
         color.a = 0f;
         character.color = color;
@@ -75,10 +82,19 @@ public class GameManager : MonoBehaviour
         timer = 0;
         eventTriggered = true;
         setTextures();
+        
+        FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetMorning");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Begin");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Stop");
     }
 
     private void setTextures()
     {
+        if (sonBad)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SetShitSound");
+        }
+        
         if (ugly)
         {
             troncObject.GetComponent<Renderer>().material = uglyTronc;
@@ -110,28 +126,34 @@ public class GameManager : MonoBehaviour
 
         if (eventCount == 1)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetMorning");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Sting");
             object2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter1 : image1;
-            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(3);
+            writeDialogue.WriteReaction(currentObject);
         }
         else if (eventCount == 2)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetAfternoon");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Sting");
             object3.gameObject.SetActive(true);
-            insect2.gameObject.SetActive(true);
-            feuille2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter2 : image2;
-            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(4);
+            writeDialogue.WriteReaction(currentObject);
         }
         else if (eventCount == 3)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetNight");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Sting");
             object4.gameObject.SetActive(true);
-            insect3.gameObject.SetActive(true);
-            feuille3.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter3 : image3;
-            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(2);
+            writeDialogue.WriteReaction(currentObject);
+        }
+        else if (eventCount > 3)
+        {
+            PlayEnding();
         }
             
     }
@@ -157,6 +179,8 @@ public class GameManager : MonoBehaviour
 
     private void PlayEnding()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/AMB/AMB_Day_SetEnd");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/MX/MX_Main");
         endingObject.gameObject.SetActive(true);
     }
 
