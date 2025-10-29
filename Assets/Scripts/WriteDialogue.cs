@@ -65,10 +65,15 @@ public class WriteDialogue : MonoBehaviour
                 }
             }
         }
+        if (index > 8)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     IEnumerator TypeLine()
     {
+        textDialogue.text = string.Empty;
         foreach (char c in lines[index].ToCharArray())
         {
             textDialogue.text += c;
@@ -77,6 +82,7 @@ public class WriteDialogue : MonoBehaviour
     }
     IEnumerator TypeLineReaction()
     {
+        textDialogue.text = string.Empty;
         foreach (char c in reactions[reactionIndex].ToCharArray())
         {
             textDialogue.text += c;
@@ -85,7 +91,7 @@ public class WriteDialogue : MonoBehaviour
     }
     void NextLine()
     {
-        if (index < linesToRead)
+        if (index < linesToRead - 1)
         {
             index++;
             textDialogue.text = string.Empty;
@@ -101,7 +107,7 @@ public class WriteDialogue : MonoBehaviour
     public void CallNextLines(int numberOfLines)
     {
         firstCall = true;
-        linesToRead += numberOfLines;
+        linesToRead += numberOfLines ;
         gameObject.SetActive(true);
         StartCoroutine(TypeLine());
         isWritting = true;
