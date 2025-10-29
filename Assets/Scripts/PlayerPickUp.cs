@@ -34,6 +34,7 @@ public class PlayerPickUp : MonoBehaviour
         GrabbableObject temp = _grabbableObject;
         _grabbableObject.Drop();
         _grabbableObject = null;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Drop");
         return temp;
     }
 
@@ -54,6 +55,31 @@ public class PlayerPickUp : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         _grabbableObject.Grab(_objectGrabPointTransform);
+                        if (_grabbableObject.CompareTag("leaf"))
+                        {
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Leaf");
+                        }
+                        else if (_grabbableObject.CompareTag("insect"))
+                        {
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Insecte");
+                        }
+                        else if (_grabbableObject.CompareTag("beer"))
+                        {
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Bottle");
+                        }
+                        else if (_grabbableObject.CompareTag("fairepart"))
+                        {
+                            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Fairepart");
+                        }
+                        else if (_grabbableObject.CompareTag("mouchoir"))
+                        {
+                            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Tissue");
+                        }
+                        else if (_grabbableObject.CompareTag("cake"))
+                        {
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Cake");
+                        }
+                        
                     }
                     else
                     {
@@ -119,6 +145,7 @@ public class PlayerPickUp : MonoBehaviour
             }
             else
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Drop");
                 Debug.Log("Dropped object in hole : " + _grabbableObject);
                 _gameManager.NextEvent();
                 _grabbableObject.gameObject.SetActive(false);
@@ -136,7 +163,7 @@ public class PlayerPickUp : MonoBehaviour
                 }
                 else if (_grabbableObject.CompareTag("fairepart"))
                 {
-                    _gameManager.setString("Announcement");
+                    _gameManager.setString("Annoucement");
                 }
                 else if (_grabbableObject.CompareTag("mouchoir"))
                 {

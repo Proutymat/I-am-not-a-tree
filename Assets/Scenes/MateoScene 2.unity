@@ -1428,6 +1428,7 @@ MonoBehaviour:
   matObj3: {fileID: 2100000, guid: 1057e84f8eae9584b80c199f8b5a7ee1, type: 2}
   matObj4: {fileID: 2100000, guid: 65983e309d4999d44b0a96fff8f75714, type: 2}
   ugly: 1
+  sonBad: 1
 --- !u!4 &1020876764
 Transform:
   m_ObjectHideFlags: 0

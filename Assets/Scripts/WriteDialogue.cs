@@ -95,8 +95,29 @@ public class WriteDialogue : MonoBehaviour
     {
         if (index < linesToRead - 1)
         {
+            
+            Debug.Log(lines[index]);
             index++;
             textDialogue.text = string.Empty;
+            if (index == 0)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_Dial1");
+            else if (index == 1)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_Dial2");
+            else if (index == 2)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_MA1");
+            else if (index == 3)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_MB2");
+            else if (index == 4)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_MA3");
+            else if (index == 5)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_MB4");
+            else if (index == 6)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_L1");
+            else if (index == 7)
+                FMODUnity.RuntimeManager.PlayOneShot("event:/VX/VX_L2");
+            
+            
+            
             StartCoroutine(TypeLine());
             isWritting = true;
         }
