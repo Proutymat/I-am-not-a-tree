@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 172217644}
   m_Layer: 4
   m_Name: Insect2
-  m_TagString: Player
+  m_TagString: insect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 512696103}
   m_Layer: 4
   m_Name: Insect3
-  m_TagString: Player
+  m_TagString: insect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -970,7 +970,7 @@ GameObject:
   - component: {fileID: 529366733}
   m_Layer: 4
   m_Name: Feuille3 (2)
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1427,7 +1427,7 @@ MonoBehaviour:
   matObj2: {fileID: 2100000, guid: 25fdcf0320f43ab47944e01ecf6cb912, type: 2}
   matObj3: {fileID: 2100000, guid: 1057e84f8eae9584b80c199f8b5a7ee1, type: 2}
   matObj4: {fileID: 2100000, guid: 65983e309d4999d44b0a96fff8f75714, type: 2}
-  ugly: 0
+  ugly: 1
 --- !u!4 &1020876764
 Transform:
   m_ObjectHideFlags: 0
@@ -1460,7 +1460,7 @@ GameObject:
   - component: {fileID: 1056664263}
   m_Layer: 4
   m_Name: Feuille3 (1)
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1637,7 +1637,7 @@ GameObject:
   - component: {fileID: 1095565151}
   m_Layer: 4
   m_Name: Insect1
-  m_TagString: Player
+  m_TagString: insect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1814,7 +1814,7 @@ GameObject:
   - component: {fileID: 1280847201}
   m_Layer: 4
   m_Name: Feuille3 (3)
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 1782526625}
   m_Layer: 4
   m_Name: Feuille3
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2570,7 +2570,7 @@ GameObject:
   - component: {fileID: 1818531532}
   m_Layer: 4
   m_Name: Feuille2 (1)
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2747,7 +2747,7 @@ GameObject:
   - component: {fileID: 1822344197}
   m_Layer: 4
   m_Name: Feuille1 (1)
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2957,7 +2957,7 @@ GameObject:
   - component: {fileID: 1942207461}
   m_Layer: 4
   m_Name: Feuille1
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3134,7 +3134,7 @@ GameObject:
   - component: {fileID: 2077294711}
   m_Layer: 4
   m_Name: Feuille2
-  m_TagString: Player
+  m_TagString: leaf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3422,6 +3422,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1517056785501408120, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
+      propertyPath: m_TagString
+      value: mouchoir
+      objectReference: {fileID: 0}
+    - target: {fileID: 1773772266455683679, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
+      propertyPath: m_TagString
+      value: fairepart
+      objectReference: {fileID: 0}
     - target: {fileID: 2105887537078689284, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.028
@@ -3433,6 +3441,10 @@ PrefabInstance:
     - target: {fileID: 6251854911725383905, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251854911725383905, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
+      propertyPath: m_TagString
+      value: cake
       objectReference: {fileID: 0}
     - target: {fileID: 6702587629860814978, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3477,6 +3489,10 @@ PrefabInstance:
     - target: {fileID: 6968847316549281460, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968847316549281460, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
+      propertyPath: m_TagString
+      value: beer
       objectReference: {fileID: 0}
     - target: {fileID: 8128205927291904303, guid: 1a59518e9cec8004b8992d697aed0a16, type: 3}
       propertyPath: m_Name

@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Material matObj4;
 
     [SerializeField] private bool ugly;
+
+    private string currentObject;
     
     private int eventCount = 0;
     private float timer = 0;
@@ -110,6 +112,7 @@ public class GameManager : MonoBehaviour
         {
             object2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter1 : image1;
+            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(3);
         }
         else if (eventCount == 2)
@@ -118,6 +121,7 @@ public class GameManager : MonoBehaviour
             insect2.gameObject.SetActive(true);
             feuille2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter2 : image2;
+            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(4);
         }
         else if (eventCount == 3)
@@ -126,9 +130,15 @@ public class GameManager : MonoBehaviour
             insect3.gameObject.SetActive(true);
             feuille3.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter3 : image3;
+            writeDialogue.WriteReaction(currentObject);
             writeDialogue.CallNextLines(2);
         }
             
+    }
+    
+    public void setString(string obj)
+    {
+        currentObject = obj;
     }
 
     public void NextEvent()
