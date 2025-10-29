@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int fadeInTime = 7;
     [SerializeField] private GameObject endingObject;
     [SerializeField] private Image character;
+    [SerializeField] private WriteDialogue writeDialogue;
     
     // OBJECTS
     [SerializeField] private GameObject object1;
@@ -105,6 +106,7 @@ public class GameManager : MonoBehaviour
         {
             object2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter1 : image1;
+            writeDialogue.Cal
         }
         else if (eventCount == 2)
         {
