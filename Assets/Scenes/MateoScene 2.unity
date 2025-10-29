@@ -868,7 +868,7 @@ MonoBehaviour:
   uglyCharacter1: {fileID: 0}
   uglyCharacter2: {fileID: 0}
   uglyCharacter3: {fileID: 0}
-  uglyDecor1: {fileID: 0}
+  uglyDecor1: {fileID: 2100000, guid: 3d52d3625edc81848963836a6bb7f4e2, type: 2}
   uglyDecor2: {fileID: 0}
   uglyDecor3: {fileID: 0}
   uglyTronc: {fileID: 2100000, guid: 0be6ccf0de62b3f449c7c65ab5f39bac, type: 2}
@@ -877,13 +877,13 @@ MonoBehaviour:
   image1: {fileID: 21300000, guid: 1ebab9f3c83ad5440a5a5a600774cceb, type: 3}
   image2: {fileID: 21300000, guid: 5ab86ffca59482a479256329fc4a7da1, type: 3}
   image3: {fileID: 21300000, guid: fc9b67b3b3b2d0843ac678ba5c3ee8a8, type: 3}
-  decor1: {fileID: 0}
+  decor1: {fileID: 2100000, guid: 3d52d3625edc81848963836a6bb7f4e2, type: 2}
   decor2: {fileID: 0}
   decor3: {fileID: 0}
   tronc: {fileID: 2100000, guid: 502391b441e371e4d847c18896bfccca, type: 2}
   ground: {fileID: 2100000, guid: a6d691a16dc261c45a46ef72245bfa6a, type: 2}
   foots: {fileID: 2100000, guid: 5aac531a79c8c11479d8729a66a8dd6c, type: 2}
-  ugly: 0
+  ugly: 1
 --- !u!4 &1020876764
 Transform:
   m_ObjectHideFlags: 0

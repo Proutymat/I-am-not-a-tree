@@ -59,13 +59,24 @@ public class GameManager : MonoBehaviour
 
         timer = 0;
         eventTriggered = true;
+        setTextures();
     }
 
     private void setTextures()
     {
         if (ugly)
         {
-            
+            troncObject.GetComponent<Renderer>().material = uglyTronc;
+            decorObject.GetComponent<Renderer>().material = uglyDecor1;
+            groundObject.GetComponent<Renderer>().material = uglyGround;
+            footsObject.GetComponent<Renderer>().material = uglyFoots;
+        }
+        else
+        {
+            troncObject.GetComponent<Renderer>().material = tronc;
+            decorObject.GetComponent<Renderer>().material = decor1;
+            groundObject.GetComponent<Renderer>().material = ground;
+            footsObject.GetComponent<Renderer>().material = foots;
         }
     }
 
