@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject object2;
     [SerializeField] private GameObject object3;
     [SerializeField] private GameObject object4;
+    [SerializeField] private GameObject insect2;
+    [SerializeField] private GameObject insect3;
+    [SerializeField] private GameObject feuille2;
+    [SerializeField] private GameObject feuille3;
     
     [SerializeField] private GameObject decorObject;
     [SerializeField] private GameObject troncObject;
@@ -111,12 +115,16 @@ public class GameManager : MonoBehaviour
         else if (eventCount == 2)
         {
             object3.gameObject.SetActive(true);
+            insect2.gameObject.SetActive(true);
+            feuille2.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter2 : image2;
             writeDialogue.CallNextLines(4);
         }
         else if (eventCount == 3)
         {
             object4.gameObject.SetActive(true);
+            insect3.gameObject.SetActive(true);
+            feuille3.gameObject.SetActive(true);
             character.sprite = ugly ? uglyCharacter3 : image3;
             writeDialogue.CallNextLines(2);
         }
