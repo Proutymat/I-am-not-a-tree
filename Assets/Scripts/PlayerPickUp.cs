@@ -69,11 +69,11 @@ public class PlayerPickUp : MonoBehaviour
                         }
                         else if (_grabbableObject.CompareTag("fairepart"))
                         {
-                            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Fairepart");
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Fairpart");
                         }
                         else if (_grabbableObject.CompareTag("mouchoir"))
                         {
-                            //FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Tissue");
+                            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/SFX_Grab_Tissue");
                         }
                         else if (_grabbableObject.CompareTag("cake"))
                         {
