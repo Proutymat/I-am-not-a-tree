@@ -18,7 +18,6 @@ public class WriteDialogue : MonoBehaviour
     void Start()
     {
         textDialogue.text = string.Empty;
-        CallNextLines(4);
         objectIndex.Add("Bug", 1);
         objectIndex.Add("Leaf", 2);
         objectIndex.Add("Annoucement", 3);
@@ -60,10 +59,6 @@ public class WriteDialogue : MonoBehaviour
                     isWritting = false;
                 }
             }
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            WriteReaction("Leaf");
         }
     }
 
